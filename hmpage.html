@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 100px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+  }
+
+  #panel-heading {
+    color: #fff !important;
+    background-color :aliceblue !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+    .jumbotron {
+    background-color: white ;
+    color: rgb(255, 255, 255);
+    padding: 100px 25px;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="file:///C:/Users/student/.vscode/adostar%20.html/aboutustrial.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+      <a href="file:///C:/Users/student/.vscode/adostar%20.html/tourpage.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+      <a href="file:///C:/Users/student/.vscode/adostar%20.html/contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">MEDIA <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="file:///C:/Users/student/.vscode/adostar%20.html/portfolio.html" class="w3-bar-item w3-button">Portfolio</a>
+          <a href="#" class="w3-bar-item w3-button">Events</a>
+          <a href="file:///C:/Users/student/.vscode/adostar%20.html/videotab.html" class="w3-bar-item w3-button">videos</a>
+             <!-- Sidebar -->
+     <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+        <i class="fa fa-remove"></i>
+      </a>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+
+          <p class="w3-opacity"><i>MASS CHOIR</i></p>
+          <p> <font colour="white"</p>
+  
+        </font>  
+      </head>
+  
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="C:\Users\student\Documents\Downloads\Totalpraise.mp4" type="video/mp4">
+    <video width="320" height="240" controls>
+      <source src="C:\Users\student\Documents\Downloads\Totalpraise.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+    
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content ">
+    
+  <h1>BARATON MASS CHOIR</h1>
+  <p><html lang="en">
+  <h2>Official site.</h2>
+  <footer class="w3-italics"> </footer> 
+ 
+  
+  
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-left w3-opacity w3-light-grey w3-xlarge">
+        <i class="facebook"><a href="https://www.facebook.com/UEABmusicians/photos/pcb.844067812413421/844066592413543/?type=3&theater/" target="BARATON">Facebook</a></p</i>
+        <i class="instagram"><a href="https://www.instagram.com/baratonmass/" target="style="font-size:48px;color:red" >Instagram</a></p</i>
+        <i class="youtube"><a href="https://www.youtube.com/watch?v=WKAkcZavN-4" target="BARATON">youtube</a></p</i>
+        <h3>copyright @2019.</h3>
+        <i class="contacts"><a href="file:///C:/Users/student/.vscode/adostar%20.html/welcmetrial.html" target="contacts">WELCOME</a></p</i>
+        <p class="w3-medium">Designed, with love, by <a href="https://www.facebook.com/baraka.maroa" target="BARATON">Baraka maroa</a></p>
+      </footer>
+
+      
+  <p><html lang="en">
+      <title>ueabmusiciansite</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      body {font-family: "Lato", sans-serif}
+      .mySlides {display: none}
+      </style>
+      <body>
+          
+            <script>
+          
+
+                    // Automatic Slideshow - change image every 2 seconds
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 4000);    
+                    }
+                    
+                    // Used to toggle the menu on small screens when clicking on the menu button
+                    function myFunction() {
+                      var x = document.getElementById("navDemo");
+                      if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                      } else { 
+                        x.className = x.className.replace(" w3-show", "");
+                      }
+                    }
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    var modal = document.getElementById('ticketModal');
+                    window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+                    </script>
+                    
+                    </body></p>
+                
+                <input type="hidden">
+              </div>
+              
+              <script>
+              var video = document.getElementById("myVideo");
+              var btn = document.getElementById("myBtn");
+              
+              function myFunction() {
+                if (video.paused) {
+                  video.play();
+                  btn.innerHTML = "Pause";
+                } else {
+                  video.pause();
+                  btn.innerHTML = "Play";
+                }
+              }
+              </script>
+               <!-- The Band Section -->
+               <!DOCTYPE html>
+<html lang="en">
+<title>BARATON MASS CHOIR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          
+            <span class="icon-bar"></span>
+            <span class="Contact"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#pricing">PRICING</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
